@@ -13,6 +13,18 @@ This project servers as an exmaple on how to build an `MVT` architecture applica
 ---
 
 ## Getting started
+1. Navigate to the [Vercel Hosted App](https://siku-njema-journal.vercel.app)
+
+2. Provide your `email address` & click `SEND INVITE`
+
+3. Click on the link sent to your inbox. You'll be redirected to the `/posts` page. 
+    > IF this does NOT happen automatically, refresh the page manually to get redirected
+
+4. Proceed to create, read, update & delete journal entries.
+
+---
+
+## Local development
 Follow these instrusctions to setup the project on your local computer
 1. Clone the repository
     ```bash
