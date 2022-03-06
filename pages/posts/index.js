@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Header from '../../lib/components/header';
 import supabase from '../../lib/services/supabase';
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const { data, error} = await supabase.from('posts').select('*');
 
     let posts;
