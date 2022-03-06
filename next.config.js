@@ -5,7 +5,13 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/:path((#access_token$).*)',
+                source: '/#',
+                has: [
+                    {
+                        type: 'query',
+                        key: 'access_token',
+                    },
+                ],
                 destination: '/posts',
                 permanent: true,
             },
