@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     const user = supabase.auth.user();
 
-    if (user !== null || user !== undefined) router.replace({pathname: '/posts'});
+    if (user !== null) router.replace({pathname: '/posts'});
   }, [router.isReady]);
 
   return <div className="py-4">
