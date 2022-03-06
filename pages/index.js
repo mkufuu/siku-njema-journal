@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
       const user = supabase.auth.user();
 
-      if (user?.id) router.push({pathname: '/posts'});
+      if (user) router.push({pathname: '/posts'});
   }, []);
 
   return <div className="py-4">
