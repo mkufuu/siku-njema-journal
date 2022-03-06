@@ -1,11 +1,9 @@
 import Head from 'next/head';
-import {useRouter} from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import supabase from '../lib/services/supabase';
 
 export default function Home() {
-  const router = useRouter();
   const [invite, setInvite] = useState('default');
 
   const handleSignInRequest = async (event) => {
@@ -18,12 +16,6 @@ export default function Home() {
 
         setInvite('success');
   }
-
-  useEffect(() => {
-      const user = supabase.auth.user();
-
-      if (user) router.push({pathname: '/posts'});
-  }, []);
 
   return <div className="py-4">
       <Head>
